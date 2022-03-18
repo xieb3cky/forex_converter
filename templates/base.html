@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="<link rel=" preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Source+Serif+Pro:ital,wght@0,300;0,700;0,900;1,900&display=swap"
+        rel="stylesheet">
+    <title>Forex Converter</title>
+</head>
+
+<body>
+    {% block h1 %}{% endblock %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category,message in messages %}
+    <h4 class="{{category}}">{{message}}</h4>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>

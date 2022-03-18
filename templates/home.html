@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block h1 %}
+<h1>Forex Converter</h1>
+{% endblock %}
+{% block content %}
+<section>
+    <form class="form" action="/calculate-rate" method="POST">
+        <label for="from">Converting from : </label>
+        <input type="text" name="from" placeholder="ex: USD">
+        <br>
+        <label for="to">Converting to : </label>
+        <input type="text" name="to" placeholder="ex: EUR">
+        <br>
+        <label for="amt">Amount : </label>
+        <input type="text" name="amt" placeholder="ex: 100">
+        <br>
+        <button class="cbtn">Convert</button>
+    </form>
+</section>
+{% endblock %}

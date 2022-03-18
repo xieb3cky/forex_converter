@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block h1 %}
+<h1>Conversion Result</h1>
+{% endblock %}
+{% block content %}
+<section>
+    <p class="result">{{symbol}}{{result}}</p>
+    <form action="/">
+        <button>Go back</button>
+    </form>
+
+</section>
+
+{% endblock %}
